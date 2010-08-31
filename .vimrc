@@ -1,0 +1,93 @@
+"necessary on some Linuxen for pathogen to load properly
+filetype off
+
+" load pathogen managed plugins (bundles)
+call pathogen#runtime_append_all_bundles()
+
+" Use vim settings rather than vi
+set nocompatible
+filetype plugin on
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+set hid                 " allow switching buffers, which have unsaved changes
+
+set history=50          " keep 50 lines of command line history
+set showcmd             " display incomplete commands
+set incsearch           " do incremental searching
+set tabstop=8
+set shiftwidth=4        " 4 characters for indenting
+set smarttab
+set expandtab
+set softtabstop=4       "delete 4 spaces at once if they appear together
+set tw=80               " limit the width of text to 80 chars
+
+
+set number              " line numbers
+set autoindent
+set cindent
+set scrolloff=5         " 5 lines before and after the current line when scrolling
+set ignorecase          " ignore case
+set smartcase           " but don't ignore it, when search string contains uppercase letters
+set showmatch           " showmatch: Show the matching bracket for the last ')'?
+set hlsearch            " hightlight all search matches
+
+" keep temporary and backup files in one place
+"set backup
+"set backupdir=$HOME\.vim\backup
+"set directory=$HOME\.vim\tmp
+
+" set a statusline and make it always show
+" ex: 
+" buf  filename mod type     line col/len percent
+" [01] ~/.vimrc [+] [vim]       33,0/55 (54%)
+set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%v/%L\ (%P)
+set laststatus=2
+
+" Spelling options
+set nospell
+set spelllang=en_us
+
+set nowrap             " don't wrap by default
+syn on
+set completeopt=menu,longest,preview
+set confirm
+
+if $TERM == "xterm"
+    set t_Co=256
+endif
+
+
+nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F7> :NERDTreeToggle .<CR>
+
+" plugin options
+" minibufexplorer options
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapModSeltarget =1
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplorerMoreThanOne=10
+
+" Taglist options
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Auto_Open = 0
+let Tlist_Use_Right_Window = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_File_Fold_Auto_Close = 1
+
+" VCSCommand options
+let VCSCommandDeleteOnHide = 1
+
+" Omnicppcomplete
+set tags=tags;/
+set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/std
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+if has("autocmd")
+    autocmd BufEnter * :lcd %:p:h    " change automatically to directory of current buffer
+    autocmd CursorMovedI * if pumvisible() == 0|pclose|endif    " Close preview window when
+    autocmd InsertLeave * if pumvisible() == 0|pclose|endif     " cursor moved
+endif "has("autocmd")
+" imap jj                       <Esc>
+"
