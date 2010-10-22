@@ -1,6 +1,5 @@
 "necessary on some Linuxen for pathogen to load properly
-filetype off
-
+filetype off 
 " load pathogen managed plugins (bundles)
 call pathogen#runtime_append_all_bundles()
 
@@ -22,7 +21,6 @@ set expandtab
 set softtabstop=4       "delete 4 spaces at once if they appear together
 set tw=80               " limit the width of text to 80 chars
 
-
 set number              " line numbers
 set autoindent
 set cindent
@@ -31,6 +29,9 @@ set ignorecase          " ignore case
 set smartcase           " but don't ignore it, when search string contains uppercase letters
 set showmatch           " showmatch: Show the matching bracket for the last ')'?
 set hlsearch            " hightlight all search matches
+
+" Use jj as <ESC>
+inoremap jj <ESC> 
 
 " keep temporary and backup files in one place
 "set backup
@@ -53,20 +54,18 @@ syn on
 set completeopt=menu,longest,preview
 set confirm
 
+" Use sane windows switching commands
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 if $TERM == "xterm"
     set t_Co=256
 endif
 
-
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle .<CR>
-
-" plugin options
-" minibufexplorer options
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapModSeltarget =1
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplorerMoreThanOne=10
 
 " Taglist options
 let Tlist_Exit_OnlyWindow = 1
@@ -89,5 +88,4 @@ if has("autocmd")
     autocmd CursorMovedI * if pumvisible() == 0|pclose|endif    " Close preview window when
     autocmd InsertLeave * if pumvisible() == 0|pclose|endif     " cursor moved
 endif "has("autocmd")
-" imap jj                       <Esc>
 "
