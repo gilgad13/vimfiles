@@ -6,7 +6,7 @@ call pathogen#runtime_append_all_bundles()
 
 " Use vim settings rather than vi
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

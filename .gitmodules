@@ -7,3 +7,9 @@
 [submodule "bundle/pastie"]
 	path = bundle/pastie
 	url = http://github.com/tpope/vim-pastie.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = http://github.com/ervandew/supertab.git
+[submodule "bundle/omnicppcomplete"]
+	path = bundle/omnicppcomplete
+	url = http://github.com/MasterKey/OmniCppComplete.git
