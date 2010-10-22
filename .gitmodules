@@ -13,3 +13,12 @@
 [submodule "bundle/omnicppcomplete"]
 	path = bundle/omnicppcomplete
 	url = http://github.com/MasterKey/OmniCppComplete.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = http://github.com/markabe/bufexplorer.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = http://github.com/vim-scripts/taglist.vim.git
