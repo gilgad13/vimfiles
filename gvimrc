@@ -1,6 +1,6 @@
 " Gvim specific options
 colorscheme railscasts
-"set guifont=Consolas:h9
+
 " Remove toolbar
 set guioptions-=T
 " Remove menu

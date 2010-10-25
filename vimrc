@@ -2,6 +2,7 @@
 filetype off 
 " load pathogen managed plugins (bundles)
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " Use vim settings rather than vi
 set nocompatible
@@ -54,6 +55,10 @@ syn on
 set completeopt=menu,longest,preview
 set confirm
 
+" Show eol and tabs
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " Use sane windows switching commands
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -63,6 +68,8 @@ nnoremap <C-l> <C-w>l
 if $TERM == "xterm"
     set t_Co=256
 endif
+
+let g:SuperTabDefaultCompletionType = "context"
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle .<CR>
@@ -84,7 +91,12 @@ set tags+=~/.vim/tags/cpp
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 if has("autocmd")
-    autocmd BufEnter * :lcd %:p:h    " change automatically to directory of current buffer
+    " change automatically to directory of current buffer
+    if exists('+autochdir')
+        set autochdir
+    else
+        autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+    endif "exists('+autochdir')
     autocmd CursorMovedI * if pumvisible() == 0|pclose|endif    " Close preview window when
     autocmd InsertLeave * if pumvisible() == 0|pclose|endif     " cursor moved
 endif "has("autocmd")
