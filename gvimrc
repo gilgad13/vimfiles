@@ -1,5 +1,5 @@
 " Gvim specific options
-colorscheme railscasts
+colorscheme sorcerer
 
 " Remove toolbar
 set guioptions-=T
