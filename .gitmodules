@@ -1,27 +1,23 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
-        ignore = untracked
+	ignore = untracked
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = http://github.com/tpope/vim-markdown.git
-        ignore = untracked
+	ignore = untracked
 [submodule "bundle/pastie"]
 	path = bundle/pastie
 	url = http://github.com/tpope/vim-pastie.git
-        ignore = untracked
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = http://github.com/ervandew/supertab.git
-        ignore = untracked
+	ignore = untracked
 [submodule "bundle/omnicppcomplete"]
 	path = bundle/omnicppcomplete
 	url = http://github.com/MasterKey/OmniCppComplete.git
-        ignore = untracked
+	ignore = untracked
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-        ignore = untracked
+	ignore = untracked
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = http://github.com/markabe/bufexplorer.git
