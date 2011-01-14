@@ -57,7 +57,7 @@ set confirm
 
 " Show eol and tabs
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,trail:-,eol:¬
 
 " Use sane windows switching commands
 nnoremap <C-h> <C-w>h
