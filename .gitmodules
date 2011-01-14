@@ -30,3 +30,6 @@
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab.git
 	ignore = untracked
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = http://github.com/tpope/vim-fugitive.git
