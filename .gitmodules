@@ -10,10 +10,6 @@
 	path = bundle/pastie
 	url = http://github.com/tpope/vim-pastie.git
 	ignore = untracked
-[submodule "bundle/omnicppcomplete"]
-	path = bundle/omnicppcomplete
-	url = http://github.com/MasterKey/OmniCppComplete.git
-	ignore = untracked
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
